@@ -1,5 +1,6 @@
 from flask import render_template, redirect, flash, url_for
 from app import app
+from app.models import Post, User
 from app.forms import LoginForm
 
 
@@ -30,5 +31,7 @@ def index():
             'body': 'Какая гадость эта ваша заливная рыба!!'
         }
     ]
-    return render_template('index.html', title='Home', user=user, posts=posts)
+    titles = Post.query.all()
+    users = User.query.all()
+    return render_template('index.html', title='Home', user=user, posts=posts, titles=titles, users=users)
 
