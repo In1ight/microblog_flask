@@ -1,10 +1,12 @@
-from flask import render_template, redirect, flash, url_for, request
-from werkzeug.urls import url_parse
-from app import app, db
-from app.models import Post, User
 from datetime import datetime
-from app.forms import LoginForm, RegistrationForm, EditProfileForm
+
+from flask import render_template, redirect, flash, url_for, request
 from flask_login import current_user, login_user, logout_user, login_required
+from werkzeug.urls import url_parse
+
+from app import app, db
+from app.forms import LoginForm, RegistrationForm, EditProfileForm
+from app.models import Post, User
 
 
 @app.route('/user/<username>')
@@ -17,10 +19,11 @@ def user(username):
     ]
     return render_template('user.html', user=user, posts=posts)
 
+
 @app.route('/editProfile', methods=['GET', 'POST'])
 @login_required
 def edit_profile():
-    form = EditProfileForm()
+    form = EditProfileForm(current_user.username)
     if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
@@ -31,7 +34,6 @@ def edit_profile():
         form.username.data = current_user.username
         form.about_me.data = current_user.about_me
     return render_template('edit_profile.html', title='Edit Profile', form=form)
-    
 
 
 @app.route('/login', methods=['GET', 'POST'])
