@@ -2,13 +2,36 @@
 
 {% block content %}
     <h1>Hi, {{ current_user.username }}</h1>
-    {% for post in posts %}
-    <div><p>{{ current_user.id }}. {{ current_user.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
+{% if form %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.post.label }}<br>
+            {{ form.post(cols=32, rows=4) }}<br>
+            {% for error in errors %}
+            <span style="color: red">[error]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endif %}
+<br>
+<br>
     <h2>Posts</h2>
-    {% for title in titles %}
-    <ul>
-        <li>{{ title.id }}. {{ title.body }} </li>
-    </ul>
-    {% endfor %}
+        {% for post in posts %}
+        {% include '_post.html' %}
+        {% endfor %}
+        {% if prev_url %}
+        <a href="{{ prev_url }}">Fresh message</a>
+        {% endif %}
+        {% if next_url %}
+        <a href="{{ next_url }}">Old message</a>
+        {% endif %}
+
+<h4>All users in our forum</h4>
+{% for u in all_users %}
+<div style="display: inline-block;">
+    <a href="{{ url_for('user', username=u.username) }}" style="color:green">{{ u.username }}</a>
+</div>
+{% endfor %}
 {% endblock %}

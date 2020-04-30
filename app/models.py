@@ -49,6 +49,10 @@ class User(UserMixin, db.Model):
             followers.c.follower_id == self.id)
         own = Post.query.filter_by(user_id=self.id)
         return subscribe.union(own).order_by(Post.timestamp.desc())
+    
+    def see_my_post(self):
+        subscribe = Post.query.filter(self.id == Post.user_id).order_by(Post.timestamp.desc())
+        return subscribe
         
         #  END follow methods users and posts
     
