@@ -1,0 +1,9 @@
+
+.idea
+__pycache__\config.cpython-38.pyc
+app\__pycache__\__init__.cpython-38.pyc
+app\__pycache__\email.cpython-38.pyc
+app\__pycache__\forms.cpython-38.pyc
+app\__pycache__\models.cpython-38.pyc
+app\__pycache__\routes.cpython-38.pyc
+*.pyc
