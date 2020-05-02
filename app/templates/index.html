@@ -1,34 +1,42 @@
 {% extends "base.html" %}
 
-{% block content %}
-    <h1>Hi, {{ current_user.username }}</h1>
+{% block app_content %}
+    <h1>Привет, {{ current_user.username }}</h1>
 {% if form %}
     <form action="" method="post">
         {{ form.hidden_tag() }}
         <p>
             {{ form.post.label }}<br>
-            {{ form.post(cols=32, rows=4) }}<br>
+            {{ form.post(rows=4, style="width:100%") }}<br>
             {% for error in errors %}
             <span style="color: red">[error]</span>
             {% endfor %}
         </p>
-        <p>{{ form.submit() }}</p>
+        <p>{{ form.submit(class="btn btn-primary") }}</p>
     </form>
 {% endif %}
 <br>
 <br>
-    <h2>Posts</h2>
+    <h2>Сообщения</h2>
         {% for post in posts %}
         {% include '_post.html' %}
         {% endfor %}
-        {% if prev_url %}
-        <a href="{{ prev_url }}">Fresh message</a>
-        {% endif %}
-        {% if next_url %}
-        <a href="{{ next_url }}">Old message</a>
-        {% endif %}
+        <nav aria-label="...">
+            <ul class="pager">
+                <li class="previous{% if not prev_url %} disabled{% endif %}">
+                    <a href="{{ prev_url or '#' }}">
+                        <span aria-hidden="true">&larr;</span> Свежие сообщения
+                    </a>
+                </li>
+                <li class="next{% if not next_url %} disabled{% endif %}">
+                    <a href="{{ next_url or '#' }}">
+                        Старые сообщения <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-<h4>All users in our forum</h4>
+<h4>Пользователи нашего форума</h4>
 {% for u in all_users %}
 <div style="display: inline-block;">
     <a href="{{ url_for('user', username=u.username) }}" style="color:green">{{ u.username }}</a>
