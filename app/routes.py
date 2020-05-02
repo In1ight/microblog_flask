@@ -1,8 +1,10 @@
 from datetime import datetime
 
 from flask import render_template, redirect, flash, url_for, request
+from flask_babel import lazy_gettext as _l, get_locale
 from flask_login import current_user, login_user, logout_user, login_required
 from werkzeug.urls import url_parse
+from flask import g
 
 from app import app, db
 from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm
@@ -17,10 +19,10 @@ from app.email import send_email, send_password_reset_email
 def follow(username):
     user = User.query.filter_by(username=username).first()
     if user is None:
-        flash('User {} not found.'.format(username))
+        flash('Пользователь {} не найден.'.format(username))
         return redirect(url_for('index'))
     if user == current_user:
-        flash('You cannot follow yourself!')
+        flash(_l('Вы не можете подписаться на самого себя'))
         return redirect(url_for('user', username=username))
     current_user.follow(user)
     db.session.commit()
@@ -36,7 +38,7 @@ def unfollow(username):
         flash('User {} not found.'.format(username))
         return redirect(url_for('index'))
     if user == current_user:
-        flash('Вы не можете подписаться на самого себя')
+        flash(_l('Вы не можете отписаться на самого себя'))
         return redirect(url_for('user', username=username))
     current_user.unfollow(user)
     db.session.commit()
@@ -67,7 +69,7 @@ def edit_profile():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
         db.session.commit()
-        flash('Ваши изменения были сохранены')
+        flash(_l('Ваши изменения были сохранены'))
         return redirect(url_for('edit_profile'))
     elif request.method == 'GET':
         form.username.data = current_user.username
@@ -83,7 +85,7 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
-            flash('Неправильный логин или пароль')
+            flash(_l('Неправильный логин или пароль'))
             return redirect(url_for('login'))
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
@@ -109,7 +111,7 @@ def register():
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
-        flash('Поздравляем, вы зарегистрированный пользователь!')
+        flash(_l('Поздравляем, вы зарегистрированный пользователь!'))
         return redirect(url_for('login'))
     return render_template('register.html', title='Регистрация', form=form)
 
@@ -119,6 +121,7 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
+    g.locale = str(get_locale())
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -130,7 +133,7 @@ def index():
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
-        flash('Ваше сообщение было добавлено')
+        flash(_l('Ваше сообщение было добавлено'))
         return redirect(url_for('index'))
     page = request.args.get('page', 1, type=int)
     posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
@@ -166,7 +169,7 @@ def reset_password_request():
         user = User.query.filter_by(email=form.email.data).first()
         if user:
             send_password_reset_email(user)
-        flash('Проверьте вашу почту на наличие инструкции для сброса пароля')
+        flash(_l('Проверьте вашу почту на наличие инструкции для сброса пароля'))
         return redirect(url_for('login'))
     return render_template('reset_password_request.html', title='Сброс пароля', form=form)
 
@@ -182,6 +185,6 @@ def reset_password(token):
     if form.validate_on_submit():
         user.set_password(form.password.data)
         db.session.commit()
-        flash('Ваш пароль был изменен!')
+        flash(_l('Ваш пароль был изменен!'))
         return redirect(url_for('login'))
     return render_template('reset_password.html', form=form)

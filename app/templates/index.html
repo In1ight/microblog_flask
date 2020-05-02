@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block app_content %}
-    <h1>Привет, {{ current_user.username }}</h1>
+    <h1>{{ _('Привет, %(username)s!', username=current_user.username) }}</h1>
 {% if form %}
     <form action="" method="post">
         {{ form.hidden_tag() }}
@@ -17,7 +17,7 @@
 {% endif %}
 <br>
 <br>
-    <h2>Сообщения</h2>
+    <h2>{{ _('Сообщения') }}</h2>
         {% for post in posts %}
         {% include '_post.html' %}
         {% endfor %}
@@ -25,18 +25,18 @@
             <ul class="pager">
                 <li class="previous{% if not prev_url %} disabled{% endif %}">
                     <a href="{{ prev_url or '#' }}">
-                        <span aria-hidden="true">&larr;</span> Свежие сообщения
+                        <span aria-hidden="true">&larr;</span> {{ _('Свежие сообщения') }}
                     </a>
                 </li>
                 <li class="next{% if not next_url %} disabled{% endif %}">
                     <a href="{{ next_url or '#' }}">
-                        Старые сообщения <span aria-hidden="true">&rarr;</span>
+                        {{ _('Старые сообщения') }} <span aria-hidden="true">&rarr;</span>
                     </a>
                 </li>
             </ul>
         </nav>
 
-<h4>Пользователи нашего форума</h4>
+<h4>{{ _('Пользователи нашего форума') }}</h4>
 {% for u in all_users %}
 <div style="display: inline-block;">
     <a href="{{ url_for('user', username=u.username) }}" style="color:green">{{ u.username }}</a>

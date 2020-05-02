@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: lokalise.com\n"
+"Project-Id-Version: 3323\n"
+"PO-Revision-Date: 2020-05-02 19:08\n"
+"Last-Translator: lokalise.com\n"
+"Language-Team: lokalise.com\n\n"
+"Language: es\n"
+
+msgid "Сообщения"
+msgstr "Mensajes"
+
+msgid "Пользователи нашего форума"
+msgstr "Usuarios de nuestro foro"
+
+msgid "Пожалуйста, войдите для доступа к этой странице"
+msgstr "Inicia sesión para acceder a esta página."
+
+msgid "Имя пользователя"
+msgstr "Nombre de usuario"
+
+msgid "Почта"
+msgstr "Mail"
+
+msgid "Почта"
+msgstr "Mail"
+
+msgid "Запомнить меня"
+msgstr "Recuerdame"
+
+msgid "Войти"
+msgstr "Iniciar sesión"
+
+msgid "Пароль"
+msgstr "Contraseña"
+
+msgid "Зарегистрироваться"
+msgstr "Registrarse"
+
+msgid "Пожалуйста, используйте другое имя"
+msgstr "Por favor use un nombre diferente."
+
+msgid "Пожалуйста, используйте другую почту"
+msgstr "Por favor use un correo electrónico diferente."
+
+msgid "Напишите что-нибудь"
+msgstr "Escribir algo"
+
+msgid "Отправить"
+msgstr "Enviar"
+
+msgid "Обо мне"
+msgstr "Acerca de mi"
+
+msgid "Сброс пароля"
+msgstr "Restablecimiento de contraseña"
+
+msgid "Повтор пароля"
+msgstr "Repetición de contraseña"
+
+msgid "Запрос на сброс пароля"
+msgstr "Solicitud de restablecimiento de contraseña"
+
+msgid "Вы не можете подписаться на самого себя"
+msgstr "No puedes suscribirte a ti mismo"
+
+msgid "Вы не можете отписаться на самого себя"
+msgstr "No puedes darte de baja"
+
+msgid "Ваши изменения были сохранены"
+msgstr "Tus cambios han sido guardados."
+
+msgid "Неправильный логин или пароль"
+msgstr "Nombre de usuario o contraseña inválidos"
+
+msgid "Поздравляем, вы зарегистрированный пользователь!"
+msgstr "¡Felicidades, eres un usuario registrado!"
+
+msgid "Ваше сообщение было добавлено"
+msgstr "Su mensaje ha sido agregado."
+
+msgid "Проверьте вашу почту на наличие инструкции для сброса пароля"
+msgstr "Revise su correo electrónico para obtener instrucciones de restablecimiento de contraseña"
+
+msgid "Ваш пароль был изменен!"
+msgstr "Su contraseña ha sido cambiada!"
+
+msgid "Упс, файл не найден"
+msgstr "Vaya, archivo no encontrado"
+
+msgid "Назад"
+msgstr "Volver"
+
+msgid "Упс, произошла ошибка!"
+msgstr "¡Vaya, se ha producido un error!"
+
+msgid "Добро пожаловать в блог"
+msgstr "Bienvenido al blog"
+
+msgid "Главная"
+msgstr "Inicio"
+
+msgid "Чат"
+msgstr "Chatear"
+
+msgid "Вход"
+msgstr "Iniciar sesión"
+
+msgid "Профиль"
+msgstr "Perfil"
+
+msgid "Выйти"
+msgstr "Salir"
+
+msgid "Редактировать профиль"
+msgstr "Editar perfil"
+
+msgid "Новый пользователь?"
+msgstr "Nuevo usuario?"
+
+msgid "Регистрация"
+msgstr "Registro"
+
+msgid "Забыл пароль?"
+msgstr "¿Olvidaste tu contraseña?"
+
+msgid "Сбросить пароль"
+msgstr "Restablecer contraseña"
+
+msgid "Сброс вашего пароля"
+msgstr "Restablece tu contraseña"
+
+msgid "Пользователь"
+msgstr "Usuario"
+
+msgid "Подписаться"
+msgstr "Suscribete"
+
+msgid "Отписаться"
+msgstr "Darse de baja"
+
+msgid "Свежие сообщения"
+msgstr "Publicaciones recientes"
+
+msgid "Старые сообщения"
+msgstr "Publicaciones antiguas"
