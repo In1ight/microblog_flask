@@ -15,3 +15,4 @@ class Config(object):
     ADMINS = ['ganiev.2000@mail.ru']
     POSTS_PER_PAGE = 10
     LANGUAGES = ['ru', 'en', 'es']
+    YA_KEY = os.environ.get('YA_KEY')

@@ -62,4 +62,5 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
 
+
 from app import routes, models, errors
