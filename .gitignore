@@ -7,3 +7,5 @@ app\__pycache__\forms.cpython-38.pyc
 app\__pycache__\models.cpython-38.pyc
 app\__pycache__\routes.cpython-38.pyc
 *.pyc
+.env
+logs

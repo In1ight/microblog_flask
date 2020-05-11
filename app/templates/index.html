@@ -39,7 +39,7 @@
 <h4>{{ _('Пользователи нашего форума') }}</h4>
 {% for u in all_users %}
 <div style="display: inline-block;">
-    <a href="{{ url_for('user', username=u.username) }}" style="color:green">{{ u.username }}</a>
+    <a href="{{ url_for('main.user', username=u.username) }}" style="color:green">{{ u.username }}</a>
 </div>
 {% endfor %}
 {% endblock %}
