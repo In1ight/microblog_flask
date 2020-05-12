@@ -1,38 +1,89 @@
-2020-05-03 13:08:01,848 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:08:37,606 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:10:33,349 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:11:38,612 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:14:52,154 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:17:04,520 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:17:40,634 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:22:05,809 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:22:15,167 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:22:39,541 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:22:49,645 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:26:15,292 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:27:41,594 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:27:49,833 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:28:52,135 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:32:54,421 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 14:02:47,966 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 15:37:46,378 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 16:34:52,187 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:07:45,184 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:08:21,432 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:09:06,578 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:10:14,059 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:10:53,989 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:11:11,986 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:12:06,679 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:14:03,963 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:15:27,444 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:24:20,832 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:24:41,350 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:24:57,217 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:27:58,528 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:31:09,583 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 17:31:44,393 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 19:11:07,772 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 19:13:53,518 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 19:32:01,158 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 19:33:27,561 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
+2020-05-11 20:04:17,244 ERROR: Exception on /auth/login [POST] [in e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\WEB\python_section\microblog_megabook\app\auth\routes.py", line 21, in login
+    flash(_l('Ќеправильный логин или пароль'))
+NameError: name '_l' is not defined
+2020-05-11 20:22:33,567 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 20:22:39,773 ERROR: Exception on /auth/register [POST] [in e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\WEB\python_section\microblog_megabook\app\auth\routes.py", line 47, in register
+    flash(_l('ѕоздравл€ем, вы зарегистрированный пользователь!'))
+NameError: name '_l' is not defined
+2020-05-11 20:23:44,961 ERROR: Exception on /auth/reset_password_request [POST] [in e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\WEB\python_section\microblog_megabook\app\auth\routes.py", line 60, in reset_password_request
+    send_password_reset_email(user)
+  File "E:\WEB\python_section\microblog_megabook\app\auth\email.py", line 11, in send_password_reset_email
+    text_body=render_template('email/reset_password.txt',
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "E:\WEB\python_section\microblog_megabook\app\templates\email\reset_password.txt", line 5, in top-level template code
+    {{ url_for('reset_password', token=token, _external=True) }}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'reset_password' with values ['token']. Did you mean 'auth.reset_password' instead?
+2020-05-11 20:35:51,126 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 20:37:34,439 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 20:38:11,660 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 20:56:38,660 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 21:04:10,266 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 21:04:34,764 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 21:07:48,792 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 21:09:16,261 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 23:37:03,179 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 23:41:34,541 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 23:41:59,544 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-12 14:18:38,177 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:74]
+2020-05-12 14:31:00,418 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:74]

@@ -1,34 +1,30 @@
-2020-04-28 14:46:54,982 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-29 16:30:38,216 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-29 16:31:47,997 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-29 16:34:12,649 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-29 16:34:40,516 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-29 17:49:07,091 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-29 17:49:49,636 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-29 17:50:44,641 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-30 19:46:01,622 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-30 20:42:02,536 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:45]
-2020-04-30 21:05:28,629 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:47]
-2020-04-30 21:11:25,897 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:47]
-2020-04-30 21:14:41,496 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:47]
-2020-05-01 17:30:49,702 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:47]
-2020-05-01 17:31:32,039 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:47]
-2020-05-01 18:17:20,596 ERROR: Exception on /register [GET] [in e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py:1891]
+2020-05-11 19:57:07,357 ERROR: Exception on /favicon.ico [GET] [in e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "E:\WEB\python_section\microblog_megabook\app\routes.py", line 114, in register
-    return render_template('register.html', title='Register', form=form)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
+    return handler(e)
+  File "E:\WEB\python_section\microblog_megabook\app\errors\handlers.py", line 10, in not_found_error
+    return render_template('errors/404.html'), 404
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 137, in render_template
     return _render(
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 120, in _render
@@ -39,29 +35,59 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "E:\WEB\python_section\microblog_megabook\app\templates\register.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: bootstrap/wtf.html
-2020-05-01 18:17:53,233 ERROR: Exception on /register [GET] [in e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py:1891]
+  File "E:\WEB\python_section\microblog_megabook\app\templates\errors\404.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "E:\WEB\python_section\microblog_megabook\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block "body"
+    {% block navbar %}
+  File "E:\WEB\python_section\microblog_megabook\app\templates\base.html", line 16, in block "navbar"
+    <a class="navbar-brand" href="{{ url_for('index') }}">Блог</a>
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2020-05-11 19:59:33,119 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]
+2020-05-11 19:59:38,149 ERROR: Exception on /favicon.ico [GET] [in e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
-    raise value
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "E:\WEB\python_section\microblog_megabook\app\routes.py", line 114, in register
-    return render_template('register.html', title='Register', form=form)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
+    return handler(e)
+  File "E:\WEB\python_section\microblog_megabook\app\errors\handlers.py", line 10, in not_found_error
+    return render_template('errors/404.html'), 404
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 137, in render_template
     return _render(
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 120, in _render
@@ -72,48 +98,31 @@ Traceback (most recent call last):
     reraise(*rewrite_traceback_stack(source=source))
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
     raise value.with_traceback(tb)
-  File "E:\WEB\python_section\microblog_megabook\app\templates\register.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: bootstrap/wtf.html
-2020-05-01 18:19:38,779 ERROR: Exception on /register [GET] [in e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py:1891]
-Traceback (most recent call last):
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+  File "E:\WEB\python_section\microblog_megabook\app\templates\errors\404.html", line 1, in top-level template code
+    {% extends 'base.html' %}
+  File "E:\WEB\python_section\microblog_megabook\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "E:\WEB\python_section\microblog_megabook\app\templates\base.html", line 49, in block "content"
+    {% block app_content %}{% endblock %}
+  File "E:\WEB\python_section\microblog_megabook\app\templates\errors\404.html", line 5, in block "app_content"
+    <p><a href="{{ url_for('index') }}">{{_('Назад')}}</a></p>
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
     reraise(exc_type, exc_value, tb)
   File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
     raise value
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "E:\WEB\python_section\microblog_megabook\app\routes.py", line 114, in register
-    return render_template('register.html', title='Register', form=form)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 137, in render_template
-    return _render(
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 120, in _render
-    rv = template.render(context)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "E:\WEB\python_section\microblog_megabook\app\templates\register.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 60, in get_source
-    return self._get_source_fast(environment, template)
-  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: bootstrap/wtf.html
-2020-05-02 14:38:55,818 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:49]
-2020-05-02 23:02:15,963 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 12:51:54,644 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:06:48,570 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
-2020-05-03 13:07:11,998 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:63]
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "e:\web\python_section\microblog_megabook\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
+2020-05-11 20:03:46,083 INFO: Microblog startup [in E:\WEB\python_section\microblog_megabook\app\__init__.py:73]

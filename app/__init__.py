@@ -11,6 +11,7 @@ from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
+from elasticsearch import Elasticsearch
 
 from config import Config
 
@@ -71,6 +72,9 @@ def create_app(config_class=Config):
     
         app.logger.setLevel(logging.INFO)
         app.logger.info('Microblog startup')
+        
+    app.elasticsearch =  Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
+        if app.config['ELASTICSEARCH_URL'] else None
         
     return app
     
